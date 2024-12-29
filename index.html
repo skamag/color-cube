@@ -36,7 +36,6 @@
       .text-container .typed-text {
         width: 0%;
         color: white;
-        /* color: rgba(0, 0, 0, 0.75); */
         font-size: 3rem;
         text-wrap: nowrap;
         overflow-x: hidden;
@@ -82,7 +81,6 @@
           rgba(0, 128, 128, 1)
         );
         opacity: 0.5;
-        /* border: 2px solid rgba(0, 0, 0, 0.375); */
         box-shadow: 0 0 10px rgba(31, 31, 48, 1);
         transition: all 0.5s ease;
         /* backdrop-filter: blur(1px); */
@@ -114,7 +112,6 @@
         height: 20px;
         top: 0;
         left: 0;
-        -webkit-animation: 1.6s dots steps(4) infinite;
         animation: 1.6s dots steps(4) infinite;
       }
       .dot-1 {
@@ -160,7 +157,7 @@
           content: "Online store";
         }
         50% {
-          content: "iOs/And. app";
+          content: "iOS/And. app";
         }
         75% {
           content: "Web 2.0 page";
@@ -210,14 +207,14 @@
         }
         25% {
           top: 0;
-          left: calc(80%);
+          left: 80%;
         }
         50% {
-          top: calc(80%);
-          left: calc(80%);
+          top: 80%;
+          left: 80%;
         }
         75% {
-          top: calc(80%);
+          top: 80%;
           left: 0;
         }
       }
@@ -253,15 +250,14 @@
       </div>
     </section>
     <script>
+      // Generating snake dots
       window.onload = () => {
         const sides = document.querySelectorAll(".side")
 
-        console.log(sides)
-
-        sides.forEach((side, index) => {
+        sides.forEach((side) => {
           for (let i = 0; i < 5; i++) {
-            let dot = document.createElement("span")
-            dot.classList.add("dot", `dot-${i + 1}`)
+            const dot = document.createElement("span")
+            dot.className = `dot dot-${i + 1}`
 
             side.appendChild(dot)
           }
